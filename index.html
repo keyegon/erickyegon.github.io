@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Erick Yegon, PhD</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px; /* Offset for sticky navbar */
+            font-family: Arial, sans-serif; /* Modern, readable font */
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        #about, #projects, #skills, #contact, #certifications {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        #about img, .skill-img {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        #about img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .skill-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #007bff; /* Blue for headings */
+        }
+        .contact-icon, .cert-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e91e63;
+            border-radius: 50%;
+            display: inline-block;
+            padding: 10px;
+        }
+        .contact-icon img, .cert-icon img {
+            width: 100%;
+            height: auto;
+        }
+        .contact-text, .cert-text {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .cert-icon {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    background-color: #e91e63; /* Pink background color */
+    border-radius: 50%; /* Makes the icons circular */
+}
+
+.cert-img {
+    width: 120px; /* Control the size of the certification icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+    border-radius: 50%; /* Circular images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    background-color: #fff; /* White background in case images are transparent */
+    padding: 10px; /* Padding around the image */
+}
+
+.cert-icon {
+    display: inline-block;
+    background-color: #e91e63; /* Pink background color if needed */
+    border-radius: 50%;
+    padding: 10px;
+}
+.card {
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover fit to handle different aspect ratios */
+}
+
+.card-title {
+    color: #007bff; /* Theme color for card titles */
+}
+
+.card-text {
+    color: #666; /* Subtle grey for text for readability */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Ensuring consistency with theme */
+    border-color: #007bff; /* Border color matches background */
+}
+#about {
+    background-color: #333; /* Dark background for the About section */
+    color: #fff; /* White text for high contrast */
+}
+
+#about img {
+    width: 100%; /* Ensure image covers the container properly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    border: 4px solid #fff; /* White border around the image */
+}
+
+#about h1, #about h3 {
+    margin-top: 0; /* Reduce margin for heading */
+}
+
+#about a {
+    color: #007bff; /* Theme color for links */
+    text-decoration: none; /* No underline */
+}
+
+#about a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+#about .mr-4 {
+    margin-right: 16px; /* Spacing between links */
+}
+
+#about .pt-3 {
+    padding-top: 12px; /* Spacing above the links */
+}
+
+    </style>
+    
+</head>
+<body>
+
+<!-- Sticky Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Erick Yegon, PhD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#certifications">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="container text-center py-5">
+  <h1>Welcome to My Professional Portfolio</h1>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container text-center py-5 bg-dark text-white">
+  <div class="row justify-content-center">
+      <div class="col-md-3">
+          <img src="images/about/1.jpg" alt="Erick Yegon" class="rounded-circle mb-3" style="width: 150px; height: 150px;">
+      </div>
+      <div class="col-md-9 text-left">
+          <h1>Erick Yegon, PhD</h1>
+          <h3>Data Science Specialist</h3>
+          <p>Based in Nairobi, Kenya, I leverage advanced analytics and machine learning to solve complex problems and drive business innovation. With a strong background in both R and Python, I deliver actionable insights through effective data analysis and visualization. Connect with me on LinkedIn for opportunities in analytics and data science.</p>
+          <div class="pt-3">
+              <a href="resume.pdf" target="_blank"><img src="icons/resume.png" alt="Resume" style="width: 24px;"> Download Resume</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container text-center py-5">
+  <h2 class="mb-5">Featured Projects</h2>
+  <div class="row">
+      <!-- Customer Churn Prediction -->
+      <div class="col-lg-4 mb-4">
+          <div class="card">
+              <img src="images/projects/1.jpg" class="card-img-top" alt="Customer Churn Prediction">
+              <div class="card-body">
+                  <h5 class="card-title">Customer Churn Prediction</h5>
+                  <p class="card-text">Utilized logistic regression to analyze user behavior and subscription data, enhancing retention strategies for a video streaming service.</p>
+                  <a href="https://rpubs.com/keyegon/983238" class="btn btn-primary">View Project</a>
+              </div>
+          </div>
+      </div>
+      <!-- Climate Change Impact on Birds -->
+      <div class="col-lg-4 mb-4">
+          <div class="card">
+              <img src="images/projects/2.jpg" class="card-img-top" alt="Climate Change Impact on Birds">
+              <div class="card-body">
+                  <h5 class="card-title">Climate Change Impact on Birds</h5>
+                  <p class="card-text">Predictive modeling project to study climate effects on the Scottish crossbill, aiding conservation efforts.</p>
+                  <a href="https://rpubs.com/keyegon/Climate" class="btn btn-primary">View Project</a>
+              </div>
+          </div>
+      </div>
+      <!-- Data Analysis Project -->
+      <div class="col-lg-4 mb-4">
+          <div class="card">
+              <img src="images/projects/3.jpg" class="card-img-top" alt="Data Analysis Project">
+              <div class="card-body">
+                  <h5 class="card-title">Data Analysis Project</h5>
+                  <p class="card-text">Comprehensive analysis leveraging big data to derive actionable insights across multiple industries.</p>
+                  <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="container py-5">
+  <h2 class="text-center mb-4">Core Skills</h2>
+  <div class="row text-center">
+      <!-- Machine Learning -->
+      <div class="col mb-4">
+          <img src="images/skills/1.png" alt="Machine Learning" class="skill-img rounded-circle">
+          <h4>Machine Learning</h4>
+          <p>Deep expertise in both Python and R for implementing supervised and unsupervised learning algorithms. Experienced in neural networks and deep learning technologies.</p>
+      </div>
+      <!-- Data Analysis -->
+      <div class="col mb-4">
+          <img src="images/skills/2.png" alt="Data Analysis" class="skill-img rounded-circle">
+          <h4>Data Analysis</h4>
+          <p>Skilled in statistical analysis and predictive modeling using Python and R. Proficient in data visualization tools such as ggplot2 and Tableau for effective storytelling.</p>
+      </div>
+      <!-- Artificial Intelligence -->
+      <div class="col mb-4">
+          <img src="images/skills/3.png" alt="Artificial Intelligence" class="skill-img rounded-circle">
+          <h4>Artificial Intelligence</h4>
+          <p>Knowledge in NLP, robotics, and machine perception to develop intelligent systems that improve decision-making and operational efficiency.</p>
+      </div>
+      <!-- Big Data Technologies -->
+      <div class="col mb-4">
+          <img src="images/skills/4.png" alt="Big Data Technologies" class="skill-img rounded-circle">
+          <h4>Big Data Technologies</h4>
+          <p>Experienced with Hadoop and Spark frameworks, focusing on analytics and data processing for large-scale data sets.</p>
+      </div>
+      <!-- Generative AI -->
+      <div class="col mb-4">
+          <img src="images/skills/5.png" alt="Generative AI" class="skill-img rounded-circle">
+          <h4>Generative AI</h4>
+          <p>Proficient in developing models using GANs and VAEs. Familiar with advanced deep learning algorithms to generate new data instances.</p>
+      </div>
+  </div>
+</section>
+
+
+
+
+<!-- Certifications Section -->
+<section id="certifications" class="container py-5" style="background-color: #f8f9fa;">
+  <h2 class="text-center mb-5" style="color: #343a40;">Certifications</h2>
+  <div class="row justify-content-center text-center">
+      <!-- Building Production Ready RAG Systems using LlamaIndex -->
+      <div class="col-md-3 mb-4">
+          <a href="https://courses.analyticsvidhya.com/certificates/0sx5e4x2wo" target="_blank">
+              <img src="images/certifications/2.png" alt="Building Production Ready RAG Systems using LlamaIndex" class="cert-img">
+          </a>
+          <p style="color: #495057;">Building Production Ready RAG Systems using LlamaIndex</p>
+          <p style="color: #6c757d;">Developed a robust recommendation system. <a href="https://github.com/yourusername/rag-system" target="_blank">View on GitHub</a></p>
+      </div>
+      <!-- Microsoft Excel: Mother of Business Intelligence -->
+      <div class="col-md-3 mb-4">
+          <a href="https://codebasics.io/certificate/CB-51-241821" target="_blank">
+              <img src="images/certifications/1.png" alt="Microsoft Excel: Mother of Business Intelligence" class="cert-img">
+          </a>
+          <p style="color: #495057;">Microsoft Excel: Mother of Business Intelligence</p>
+          <p style="color: #6c757d;">Enhanced BI techniques using advanced Excel features. <a href="https://github.com/yourusername/excel-bi" target="_blank">View on GitHub</a></p>
+      </div>
+      <!-- Certified Data Scientist -->
+      <div class="col-md-3 mb-4">
+          <a href="https://learn.365datascience.com/certificates/DD-95226F1ABF/" target="_blank">
+              <img src="images/certifications/5.png" alt="Certified Data Scientist" class="cert-img">
+          </a>
+          <p style="color: #495057;">Certified Data Scientist</p>
+          <p style="color: #6c757d;">Applied ML techniques to real-world data sets. <a href="https://github.com/yourusername/certified-data-scientist" target="_blank">View on GitHub</a></p>
+      </div>
+      <!-- Data Scientist Professional Certificate -->
+      <div class="col-md-3 mb-4">
+          <a href="https://www.datacamp.com/certificate/DS0029709106563" target="_blank">
+              <img src="images/certifications/3.png" alt="Data Scientist Professional Certificate" class="cert-img">
+          </a>
+          <p style="color: #495057;">Data Scientist Professional Certificate</p>
+          <p style="color: #6c757d;">Focused on deep learning and statistical methods. <a href="https://github.com/yourusername/professional-certificate" target="_blank">View on GitHub</a></p>
+      </div>
+      <!-- Data Science Capstone Milestone Report -->
+      <div class="col-md-3 mb-4">
+          <a href="https://coursera.org/verify/specialization/US6CC56QA4KB" target="_blank">
+              <img src="images/certifications/7.png" alt="Data Science Capstone Milestone Report" class="cert-img">
+          </a>
+          <p style="color: #495057;">Data Science Capstone Milestone Report</p>
+          <p style="color: #6c757d;">Capstone project in predictive modeling. <a href="https://github.com/yourusername/capstone-milestone" target="_blank">View on GitHub</a></p>
+      </div>
+      <!-- Google Data Analytics Professional Certificate -->
+      <div class="col-md-3 mb-4">
+          <a href="https://www.coursera.org/account/accomplishments/professional-cert/H9CJESBR2X9T" target="_blank">
+              <img src="images/certifications/4.png" alt="Google Data Analytics Professional Certificate" class="cert-img">
+          </a>
+          <p style="color: #495057;">Google Data Analytics Professional Certificate</p>
+          <p style="color: #6c757d;">Advanced analytics techniques using Google tools. <a href="https://github.com/yourusername/google-data-analytics" target="_blank">View on GitHub</a></p>
+      </div>
+      <!-- Data Analyst Career Track -->
+      <div class="col-md-3 mb-4">
+          <a href="https://learn.365datascience.com/certificates/DD-FCD8346453/" target="_blank">
+              <img src="images/certifications/5.png" alt="Data Analyst Career Track" class="cert-img">
+          </a>
+          <p style="color: #495057;">Data Analyst Career Track</p>
+          <p style="color: #6c757d;">Comprehensive data analysis and visualization training. <a href="https://github.com/yourusername/data-analyst-track" target="_blank">View on GitHub</a></p>
+      </div>
+      <!-- KaggleX BiPOC Mentorship Program -->
+      <div class="col-md-3 mb-4">
+          <div>
+              <img src="images/certifications/6.png" alt="KaggleX BiPOC Mentorship Program" class="cert-img">
+          </div>
+          <p style="color: #495057;">KaggleX BiPOC Mentorship Program</p>
+          <p style="color: #6c757d;">Mentorship and collaboration on Kaggle competitions. <a href="https://github.com/yourusername/kaggle-bipoc" target="_blank">View on GitHub</a></p>
+      </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="container-fluid">
+    <h2>Contact Me</h2>
+    <div class="contact-text">
+        <span>📧 keyegon@gmail.com</span>
+        <span>📞 +254739579369</span>
+    </div>
+    <div>
+        <a href="https://www.linkedin.com/in/erick-yegon-phd-4116961b4/" class="contact-icon"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://twitter.com/eyegonk" class="contact-icon"><img src="icons/twitter.png" alt="Twitter"></a>
+        <a href="https://github.com/keyegon" class="contact-icon"><img src="icons/github.png" alt="GitHub"></a>
+        <a href="https://medium.com/@eyegon" class="contact-icon"><img src="icons/medium.png" alt="Medium"></a>
+        <a href="https://www.youtube.com/channel/UCDXXXX" class="contact-icon"><img src="icons/youtube.png" alt="YouTube"></a>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
